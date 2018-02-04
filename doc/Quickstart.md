@@ -29,7 +29,7 @@
 
 在elasticsearch-php中，几乎一切操作都是用关联数组来完成。REST方法、文档和参数——都是关联数组来表示。
 
-为了索引一个文档，我们要指定4部分信息：index，type，id和一个body。构建一个的关联数组就可以完成上面的4部分。请求体的键值对格式与文档的键值对格式保持一致性。（如['testField' => 'abc']在文档中则为{"testField" : "abc"}）：
+为了索引一个文档，我们要指定4部分信息：index，type，id和一个body。构建一个关联数组就可以完成上面的4部分。请求体的键值对格式与文档的键值对格式保持一致性。（如['testField' => 'abc']在文档中则为{"testField" : "abc"}）：
 
 	$params = [
 	    'index' => 'my_index',

@@ -34,14 +34,14 @@ Elasticsearch-PHP的版本要和Elasticsearch版本适配，适配信息如下�
 
 	composer install --no-dev
 
-最后，加载autoload.php。如果你现有项目是用Composer安装的，那么autoload.php也许已经在某处加载了，你就不用再加载了。然后就可以实例化一个client了：
+最后，加载autoload.php。如果你现有项目是用Composer安装的，那么autoload.php也许已经在某处加载了，你就不用再加载了。然后就可以实例化一个client对象了：
 
 	require 'vendor/autoload.php';
 	
 	$client = Elasticsearch\ClientBuilder::create()->build();
 
-Client的实例化主要是使用静态方法create()，这里会创建一个ClientBuilder对象，主要是用来设置一些配置。如果你配置完了，你就可以调用build()方法来生产一个Client对象。我们会在<b>配置</b>章节详细说明配置方法。
+Client对象的实例化主要是使用静态方法create()，这里会创建一个ClientBuilder对象，主要是用来设置一些配置。如果你配置完了，你就可以调用build()方法来创建一个Client对象。我们会在<b>配置</b>章节详细说明配置方法。
 
 ## --no-dev标志
 
-你会注意到安装命令行指定了--no-dev。这里是防止Composer 安装测试和开发依赖包。对于普通用户没有必要安装测试包。尤其是开发包包含了Elasticsearch的一套源码，主要是用来测试REST的。这对于非开发者来说太大了，因此要使用--no-dev。
+你会注意到安装命令行指定了--no-dev。这里是防止Composer安装测试和开发依赖包。对于普通用户没有必要安装测试包。尤其是开发包包含了Elasticsearch的一套源码，主要是用来测试REST的。这对于非开发者来说太大了，因此要使用--no-dev。
