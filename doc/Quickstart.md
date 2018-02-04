@@ -1,6 +1,6 @@
 # 快速开始
 
-这一章会大概描述一下client以及client内的一些主要方法的使用。
+这一章会概述一下client以及client内的一些主要方法的使用。
 
 ## 安装
 
@@ -27,9 +27,9 @@
 
 ## 索引一个文档
 
-在elasticsearch-php中，几乎一切都是用关联数组的写法。REST方法、文档和参数——所有都是关联数组。
+在elasticsearch-php中，几乎一切操作都是用关联数组来完成。REST方法、文档和参数——都是关联数组来表示。
 
-为了索引一个文档，我们要指定4部分信息：index，type，id和一个body。构建一个键值对的关联数组就可以完成上面的4部分。请求提的键值对格式与文档的键值对格式保持一致性。（如['testField' => 'abc']在文档中则为{"testField" : "abc"}）：
+为了索引一个文档，我们要指定4部分信息：index，type，id和一个body。构建一个的关联数组就可以完成上面的4部分。请求体的键值对格式与文档的键值对格式保持一致性。（如['testField' => 'abc']在文档中则为{"testField" : "abc"}）：
 
 	$params = [
 	    'index' => 'my_index',
@@ -41,7 +41,7 @@
 	$response = $client->index($params);
 	print_r($response);
 
-返回的数据则表面文档已被创建。返回的数据是一个关联数组，包含了Elasticsearch返回的被decode过的Json信息：
+返回的数据是一个关联数组，表示文档已被创建，返回的数据是已经被decode过的Json信息：
 
 	Array
 	(
@@ -54,7 +54,7 @@
 
 ## 获取一个文档
 
-现在获取刚刚索引的文档：
+现在获取刚才索引的文档：
 	
 	$params = [
 	    'index' => 'my_index',
@@ -65,8 +65,8 @@
 	$response = $client->get($params);
 	print_r($response);
 
-返回的信息包含一些元信息（如index，type及其它的信息）和_source 属性，
-这些也是你发送给Elasticsearch的最初数据。
+返回的信息包含一些元数据（如index，type等等）和_source 属性，
+这些也是你发送给Elasticsearch的数据。
 
 	Array
 	(
@@ -84,7 +84,7 @@
 
 ## 搜索一个文档
 
-搜索是elasticsearch的一大特色，所以我们试一下执行一个搜索。我们准备用Match方法作为示范：
+搜索是elasticsearch的一大特色，所以我们试一下执行一个搜索。我们准备用Match查询来作为示范：
 
 	$params = [
 	    'index' => 'my_index',
@@ -149,7 +149,7 @@
 	$response = $client->delete($params);
 	print_r($response);
 
-你会注意到删除文档的语法与获取文档的语法是一样的。唯一不同的是操作方法：delete方法替代了get方法。下面的返回信息代表文档已被删除：
+你会注意到删除文档的语法与获取文档的语法是一样的。唯一不同的是操作方法：delete方法替代了get方法。下面返回的信息代表文档已被删除：
 
 	Array
 	(
@@ -179,7 +179,7 @@
 
 ## 创建一个索引
 
-我们可以重新开始了，现在要添加一个索引，同时配置一下settings：
+由于数据已被清空，我们可以重新开始了，现在要添加一个索引，同时配置一下settings：
 
 	$params = [
 	    'index' => 'my_index',
@@ -205,6 +205,6 @@ Elasticsearch创建了一个索引，并且配置了特定的settings，返回�
 
 这里只是概述了一下client以及它的语法。如果你很熟悉elasticsearch，你会注意到这些方法的命名跟REST方法是一样的。
 
-你也注意到了client的命名从某种程度上讲也是方便你的IDE易于搜索。$client对象下的所有核心方法都是可用的。索引管理和集群管理分别在$client->indices()和$client->cluster()中。
+你也注意到了client的方法命名从某种程度上讲也是方便你的IDE易于搜索。$client对象下的所有核心方法都是可用的。索引管理和集群管理分别在$client->indices()和$client->cluster()中。
 
-请查询文档的其余内容以便知道整个client是如何使用的。
+请查询文档的其余内容以便知道整个client对象是如何使用的。
