@@ -146,7 +146,7 @@ Elasticsearch-PHP支持日志写入，但由于性能原因，所以没有默认
 	            ->setLogger($logger)        // Set the logger with a default logger
 	            ->build();                  // Build the client object
 
-defaultLogger()方法只是一个辅助方法，不要求你使用它。你可以自己创建日志对象，自己注入：
+defaultLogger()方法只是一个辅助方法，不要求你使用它。你可以自己创建日志对象，然后注入：
 
 	use Monolog\Logger;
 	use Monolog\Handler\StreamHandler;
@@ -181,7 +181,7 @@ client使用的默认handler是结合型handler。当以同步模式发送请求
 
 ## 设置连接池
 
-client会维持一个连接池，每个连接池代表集群的一个节点。这里有好几类连接池可供使用，每个的行为都有些细微差距。连接池可通过setConnectionPool()来配置：
+client会维持一个连接池，每个连接代表集群的一个节点。这里有好几类连接池可供使用，每个的行为都有些细微差距。连接池可通过setConnectionPool()来配置：
 
 	$connectionPool = '\Elasticsearch\ConnectionPool\StaticNoPingConnectionPool';
 	$client = ClientBuilder::create()
@@ -212,7 +212,7 @@ client得到的请求数据是关联数组，但是Elasticsearch接受JSON数据
 	            ->setSerializer($serializer)
 	            ->build();
 
-更多细节请查询[序列化配置](https://www.elastic.co/guide/en/elasticsearch/client/php-api/5.0/_serializers.html)（以后翻译）、
+更多细节请查询[序列化配置](https://www.elastic.co/guide/en/elasticsearch/client/php-api/5.0/_serializers.html)（以后翻译）
 
 ## 设置自定义ConnectionFactory
 
@@ -260,7 +260,7 @@ client得到的请求数据是关联数组，但是Elasticsearch接受JSON数据
 
 ## 设置Endpoint闭包
 
-client对象使用Endpoint闭包来调度API请求，以到达正确的Endpoint对象。一个命名空间对象会通过闭包构建一个新的Endpoint，这个意味着如果你想扩展API的方法，你可以很方便的做到。（以上翻译有误，后期更正）
+client对象使用Endpoint闭包来发送API请求到Elasticsearch的Endpoint对象。一个命名空间对象会通过闭包构建一个新的Endpoint，这个意味着如果你想扩展API的方法，你可以很方便的做到。（以上翻译有误，后期更正）
 
 例如，我们可以新增一个endpoint：
 

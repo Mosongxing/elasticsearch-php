@@ -1,0 +1,6 @@
+.idea
+.DS_Store
+demo/vendor
+demo/composer.json
+demo/composer.lock
+log.txt
