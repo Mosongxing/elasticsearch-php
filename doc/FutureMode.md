@@ -202,6 +202,6 @@ PHP是单线程的，然而libcurl提供multi interface功能。这使得像PHP�
 
 另外一点是一些方法会失效。比如exists方法（$client->exists(), $client->indices()->exists, $client->indices->templateExists()等）在正常情况下会返回true或false。
 
-当使用future模式时，future对象是unwrapping的，这代表client对象无法检测响应结果和返回true或false。所以你会得到从Elasticsearch返回的原始响应数据，不得不对这些数据进行处理。
+当使用future模式时，future对象是未封装的，这代表client对象无法检测响应结果和返回true或false。所以你会得到从Elasticsearch返回的原始响应数据，不得不对这些数据进行处理。
 
 这些注意事项也适用于ping()方法。
