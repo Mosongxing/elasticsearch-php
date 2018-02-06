@@ -7,15 +7,24 @@ use Elasticsearch\ClientBuilder;
 $client = ClientBuilder::create()->build();
 
 // 索引一个文档
-$params = [
+/*$params = [
     'index' => 'my_index',
     'type' => 'my_type',
     'id' => 'my_id',
     'body' => ['testField' => 'abc']
 ];
 
-$response = $client->index($params);
-print_r($response);
+$response = $client->index($params);*/
+
+for ($i = 1; $i < 501; $i++) {
+    $params = [
+        'index' => 'test',
+        'type' => 'test',
+        'id' => $i,
+        'body' => ['testField' => 'abc']
+    ];
+    $client->index($params);
+}
 
 // 获取一个文档
 /*$params = [
