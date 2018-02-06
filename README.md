@@ -7,3 +7,4 @@
 * [配置](https://github.com/Mosongxing/Elasticsearch-PHP5.0/blob/master/doc/Configuration.md)
 * [请求层配置](https://github.com/Mosongxing/Elasticsearch-PHP5.0/blob/master/doc/Per-request_configuration.md)
 * [Future模式](https://github.com/Mosongxing/Elasticsearch-PHP5.0/blob/master/doc/FutureMode.md)
+* [处理PHP的JSON数组和对象](https://github.com/Mosongxing/Elasticsearch-PHP5.0/blob/master/doc/Json.md)
