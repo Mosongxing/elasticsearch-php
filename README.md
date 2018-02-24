@@ -1,4 +1,4 @@
-# Elasticsearch-PHP[6.0]
+# Elasticsearch-PHP
 
 Master为最新版本的文档，其余版本的文档后续再补全。
 
@@ -20,3 +20,4 @@ Master为最新版本的文档，其余版本的文档后续再补全。
 * [安全](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Security.md)
 * [连接池](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/ConnectionPool.md)
 * [选择器](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Selectors.md)
+* [序列化器](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Serializers.md)

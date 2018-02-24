@@ -201,18 +201,18 @@ Elasticsearch-PHP使用的是可替代的HTTP传输层——RingPHP。这允许�
 
 更多细节请查询[选择器配置](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Selectors.md)
 
-## 设置序列化工具（Serializer）
+## 设置序列化器（Serializer）
 
-客户端的请求数据是关联数组，但是Elasticsearch接受JSON数据。序列化工具是指把PHP数组序列化为JSON数据。当然Elasticsearch返回的JSON数据也会反序列化为PHP数组。这看起来有些繁琐，但把序列化工具模块化对于处理一些极端案例有莫大帮助。
+客户端的请求数据是关联数组，但是Elasticsearch接受JSON数据。序列化器是指把PHP数组序列化为JSON数据。当然Elasticsearch返回的JSON数据也会反序列化为PHP数组。这看起来有些繁琐，但把序列化器模块化对于处理一些极端案例有莫大帮助。
 
-大部分人不会更改默认的序列化工具（SmartSerializer），但你真的想改变，那可以通过setSerializer()方法：
+大部分人不会更改默认的序列化器（SmartSerializer），但你真的想改变，那可以通过setSerializer()方法：
 
 	$serializer = '\Elasticsearch\Serializers\SmartSerializer';
 	$client = ClientBuilder::create()
 	            ->setSerializer($serializer)
 	            ->build();
 
-更多细节请查询[序列化工具配置](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Serializer.md)
+更多细节请查询[序列化器配置](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Serializer.md)
 
 ## 设置自定义ConnectionFactory
 
@@ -256,7 +256,7 @@ Elasticsearch-PHP使用的是可替代的HTTP传输层——RingPHP。这允许�
 	            ->setConnectionFactory($connectionFactory);
 	            ->build();
 
-如上所述，如果你想注入自定义的ConnectionFactory，你自己就要负责写对它。自定义ConnectionFactory需要用到HTTP handler，序列化工具，日志和追踪。
+如上所述，如果你想注入自定义的ConnectionFactory，你自己就要负责写对它。自定义ConnectionFactory需要用到HTTP handler，序列化器，日志和追踪。
 
 ## 设置Endpoint闭包
 
