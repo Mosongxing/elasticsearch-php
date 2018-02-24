@@ -21,3 +21,5 @@ Master为最新版本的文档，其余版本的文档后续再补全。
 * [连接池](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/ConnectionPool.md)
 * [选择器](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Selectors.md)
 * [序列化器](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Serializers.md)
+* [PHP版本需求](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Version.md)
+* [Breaking changes from 5.x](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Changes.md)
