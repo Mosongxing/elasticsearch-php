@@ -217,11 +217,11 @@ Elasticsearch-PHP的类库是会对普通的问题抛出异常的。这些异常
 	$future = $client->get($params);
 	$results = $future->wait();       // resolve the future
 
-Future模式有两个参数可选：true 或 lazy。关于异步执行方法以及如何处理返回结果的详情，请到[Future模式](https://www.elastic.co/guide/en/elasticsearch/client/php-api/6.0/_future_mode.html)中查看。
+Future模式有两个参数可选：true或lazy。关于异步执行方法以及如何处理返回结果的详情，请到[Future模式](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/FutureMode.md)中查看。
 
 ## SSL加密
 
-在创建客户端时，一般需要指定SSL配置，因为通常所有的请求都需要加密（查询[安全](https://www.elastic.co/guide/en/elasticsearch/client/php-api/6.0/_security.html)一章获取更多详情）。然而，在每个请求中配置SSL加密也是有可能的。例如，如果你需要在某个特定的请求中使用自签名证书，你可以通过在client选项中配置verify参数：
+在创建客户端时，一般需要指定SSL配置，因为通常所有的请求都需要加密（查询[安全](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Security.md)一节获取更多详情）。然而，在每个请求中配置SSL加密也是有可能的。例如，如果你需要在某个特定的请求中使用自签名证书，你可以通过在client选项中配置verify参数：
 
 	$client = ClientBuilder::create()->build();
 
