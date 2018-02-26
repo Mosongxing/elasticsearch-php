@@ -5,7 +5,7 @@ Elasticsearch-php需要满足以下4个需求：
 * PHP 7.0.0或更高版本
 * Composer
 * ext-curl:PHP的Libcurl扩展
-* Native JSON扩展 (ext-json) 1.3.7或更高版本
+* 原生JSON扩展 (ext-json) 1.3.7或更高版本
 
 其余的依赖会由Composer自动安装。Composer是一个PHP包管理和依赖管理工具，使用Composer安装elasticsearch-php非常简单。
 
