@@ -10,7 +10,7 @@ Elasticsearch-php的安装需要满足以下4个需求：
 其余的依赖会由Composer自动安装。Composer是一个PHP包管理和依赖管理工具，使用Composer安装elasticsearch-php非常简单。
 
 	注意：Libcurl是可替代的
-	与Elasticsearch-php绑定的默认HTTP handlers需要PHP的Libcurl扩展，但客户端也并非一定要用Libcurl扩展。如果你有
+	与Elasticsearch-php客户端绑定的默认HTTP handlers需要PHP的Libcurl扩展，但客户端也并非一定要用Libcurl扩展。如果你有
 	一台主机没有安装Libcurl扩展，你可以使用基于PHP streams的HTTP handler来替代。但是性能会变差，因为Libcurl扩展要
 	快得多。
 

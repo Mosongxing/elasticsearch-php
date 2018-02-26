@@ -1,6 +1,6 @@
 # 配置
 
-几乎所有应用（如mysql、redis等）的客户端都可以配置。大多数用户只需配置一些参数来满足他们的需求，但是也有可能配置所有的参数来满足需求。
+几乎所有应用（如mysql、redis等）的客户端都可以配置。大多数用户只需配置一些参数来满足他们的需求，但是也有可能替换大量的部件来满足需求。
 
 在客户端对象实例化前就应该通过ClientBuilder对象来完成自定义配置。我们会概述一下所有的配置参数，并且展示一些代码示例。
 
@@ -95,7 +95,7 @@
 	    }
 	}
 
-由于所有curl 抛出的异常(CouldNotConnectToHost, CouldNotResolveHostException, OperationTimeoutException)都继承TransportException。这样你就能够用TransportException来替代如上3种异常：
+由于所有curl抛出的异常(CouldNotConnectToHost, CouldNotResolveHostException, OperationTimeoutException)都继承TransportException。这样你就能够用TransportException来替代如上3种异常：
 
 	$client = Elasticsearch\ClientBuilder::create()
 	    ->setHosts(["localhost:1"])
@@ -120,7 +120,7 @@ Elasticsearch-PHP支持日志记录，但由于性能原因，所以默认没有
 	{
 	    "require": {
 	        ...
-	        "elasticsearch/elasticsearch" : "~5.0",
+	        "elasticsearch/elasticsearch" : "~6.0",
 	        "monolog/monolog": "~1.0"
 	    }
 	}
