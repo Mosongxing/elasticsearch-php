@@ -5,31 +5,31 @@
 ## 安装
 
 * 在composer.json文件中引入elasticsearch-php：
-* 
+ 
 		{
 		    "require": {
-		        "elasticsearch/elasticsearch": "~5.0"
+		        "elasticsearch/elasticsearch": "~6.0"
 		    }
 		}
 
 * 用composer安装客户端：
 
-	curl -s http://getcomposer.org/installer | php
-	php composer.phar install --no-dev
+		curl -s http://getcomposer.org/installer | php
+		php composer.phar install --no-dev
 
 * 在项目中引入自动加载文件（如果还没引入），并且实例化一个客户端：
 
-	require 'vendor/autoload.php';
-	
-	use Elasticsearch\ClientBuilder;
-	
-	$client = ClientBuilder::create()->build();
+		require 'vendor/autoload.php';
+		
+		use Elasticsearch\ClientBuilder;
+		
+		$client = ClientBuilder::create()->build();
 
 ## 索引一个文档
 
-在elasticsearch-php中，几乎一切操作都是用关联数组来配置。REST端点、文档和可选参数——都是关联数组来配置。
+在elasticsearch-php中，几乎一切操作都是用关联数组来配置。REST端点（endpoint）、文档和可选参数——都是关联数组来配置。
 
-为了索引一个文档，我们要指定4部分信息：index，type，id和一个body。构建一个键值对的关联数组就可以完成上面的内容。请求体的键值对格式与文档的数据保持一致性。（如['testField' => 'abc']在文档中则为{"testField" : "abc"}）：
+为了索引一个文档，我们要指定4部分信息：index，type，id和一个body。构建一个键值对的关联数组就可以完成上面的内容。请求体的键值对格式与文档的数据保持一致性。（译者注：如['testField' => 'abc']在文档中则为{"testField" : "abc"}）：
 
 	$params = [
 	    'index' => 'my_index',

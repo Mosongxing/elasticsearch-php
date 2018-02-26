@@ -24,4 +24,5 @@ Master为最新版本的文档，其余版本的文档后续再补全。
 * [PHP版本需求](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Version.md)
 * [Breaking changes from 5.x](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/Changes.md)
 * [社区DSLs](https://github.com/Mosongxing/elasticsearch-php-doc/blob/master/doc/CommunityDSLs.md)
+* [社区整合](https://www.elastic.co/guide/en/elasticsearch/client/php-api/current/_community_integrations.html)
 * [Reference - Endpoints](https://www.elastic.co/guide/en/elasticsearch/client/php-api/current/ElasticsearchPHP_Endpoints.html)
