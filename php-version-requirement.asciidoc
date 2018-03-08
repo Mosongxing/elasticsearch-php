@@ -1,0 +1,4 @@
+[[_php_version_requirement]]
+== PHP版本需求
+
+Elasticsearch-PHP6.0 需要 PHP 7.0.0或者更高版本。另外，它还需要原生 JSON 扩展的版本为1.3.7或者更高版本。。
