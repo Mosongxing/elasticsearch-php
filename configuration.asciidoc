@@ -192,7 +192,7 @@ $client = ClientBuilder::create()       // Instantiate a new ClientBuilder
             ->build();                  // Build the client object
 --------------------------------------------------
 
-=== 配置HTTP Handler
+=== 配置 HTTP Handler
 
 Elasticsearch-PHP 使用的是可替代的 HTTP 传输层——https://github.com/guzzle/RingPHP/[RingPHP]。这允许客户端构建一个普通的 HTTP 请求，然后通过传输层发送出去。真正的请求细节隐藏在客户端内，并且这是模块化的，因此你可以根据你的需求来选择 HTTP handlers。
 
@@ -260,7 +260,7 @@ $client = ClientBuilder::create()
 
 更多细节请查询 link:_serializers.html[序列化器配置]。
 
-=== 设置自定义ConnectionFactory
+=== 设置自定义 ConnectionFactory
 
 当连接池发送请求时，ConnectionFactory 就会实例化连接对象。一个连接对象代表一个节点。因为 handler（通过RingPHP）才是真正的执行网络请求，那么连接对象的主要工作就是维持连接：节点是活节点吗？ping 的通吗？host 和端口是什么？
 

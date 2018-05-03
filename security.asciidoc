@@ -28,11 +28,11 @@ $client = ClientBuilder::create()
 [NOTE]
 .libcurl版本注意事项
 ====
-如果你觉得客户端已经正确配置SSL，但是没有起效，请检查你的libcurl版本。在某些平台上，一些设置可能有效也可能无效，这取决于
-libcurl版本号。例如直到libcurl 7.37.1，OSX平台的libcurl才添加 `--cacert` 选项。 `--cacert` 选项对应PHP的 `CURLOPT_CAINFO` 常量，
+如果你觉得客户端已经正确配置 SSL，但是没有起效，请检查你的 libcurl 版本。在某些平台上，一些设置可能有效也可能无效，这取决于
+libcurl 版本号。例如直到 libcurl 7.37.1，OSX 平台的 libcurl 才添加 `--cacert` 选项。 `--cacert` 选项对应 PHP 的 `CURLOPT_CAINFO` 常量，
 这就意味着自定义的证书在低版本下是无法使用的。
 
-如果你现在正面临这个问题，请更新你的libcurl，然后/或者查看https://curl.haxx.se/changes.html[curl changelog]有无增加该选项。
+如果你现在正面临这个问题，请更新你的 libcurl，然后/或者查看 https://curl.haxx.se/changes.html[curl changelog] 有无增加该选项。
 ====
 
 ==== 公共 CA 证书
@@ -51,7 +51,7 @@ $client = ClientBuilder::create()
 --------------------------------------------------
 <1> 注意：这里用的是 https 而非 http
 
-如果服务器的根证书已经过期，你就要用证书 bundle。对于客户端来说，最好的方法是使用https://github.com/composer/ca-bundle[composer/ca-bundle]。一旦安装好 ca-bundle，你要告诉客户端使用你提供的证书来替代系统的 bundle：
+如果服务器的根证书已经过期，你就要用证书 bundle。对于客户端来说，最好的方法是使用 https://github.com/composer/ca-bundle[composer/ca-bundle]。一旦安装好 ca-bundle，你要告诉客户端使用你提供的证书来替代系统的 bundle：
 
 [source,php]
 --------------------------------------------------

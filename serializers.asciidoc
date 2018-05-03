@@ -3,7 +3,7 @@
 
 客户端有 3 种序列化器可用。你可能永远都不会更改序列化器，除非你有特殊需求或者要实现一个新的协议。
 
-序列化器的工作是 encode 发送的请求体和 decode 返回的响应体。在 99% 的例子中，这就是一种简单转换为JSON数据或解析JSON数据的工具。
+序列化器的工作是 encode 发送的请求体和 decode 返回的响应体。在 99% 的例子中，这就是一种简单转换为JSON数据或解析 JSON 数据的工具。
 
 默认的序列化器是 `SmartSerializer` 。
 
@@ -21,7 +21,7 @@
 
 这个功能需要与 endpoint 协作，例如 `Cat` endpoints 会返回表格文本而非 JSON 数据。
 
-==== 选择SmartSerializer
+==== 选择 SmartSerializer
 
 客户端默认选择 `SmartSerializer` ，但如果你想手动地配置这个选择器，你可以在 ClientBuilder 对象中使用 `setSerializer()` 方法：
 

@@ -1,5 +1,5 @@
 [[_index_management_operations]]
-== 索引管理操作
+== 索引管理
 
 索引管理操作可以让你管理集群中的索引，例如创建、删除和更新索引和索引的映射/配置。
 
@@ -65,10 +65,10 @@ $response = $client->indices()->create($params);
 $params = [
     'index' => 'reuters',
     'body' => [
-        'settings' => [ 
+        'settings' => [
             'number_of_shards' => 1,
             'number_of_replicas' => 0,
-            'analysis' => [ 
+            'analysis' => [
                 'filter' => [
                     'shingle' => [
                         'type' => 'shingle'
@@ -95,8 +95,8 @@ $params = [
                 ]
             ]
         ],
-        'mappings' => [ 
-            '_default_' => [    
+        'mappings' => [
+            '_default_' => [
                 'properties' => [
                     'title' => [
                         'type' => 'string',
@@ -125,7 +125,7 @@ $params = [
                     ]
                 ]
             ],
-            'my_type' => [  
+            'my_type' => [
                 'properties' => [
                     'my_field' => [
                         'type' => 'string'
@@ -252,11 +252,11 @@ $response = $client->indices()->getMapping($params);
 --------------------------------------------------
 {zwsp} +
 
-=== 索引命名空间下的其他API
+=== 索引命名空间下的其他 API
 
 索引命名空间下还有一些 API 允许你管理你的索引（add/remove templates, flush segments, close indexes等）。
 
-如果你使用一个自动化的 IDE，你应该可以轻易发现索引的命名空间：
+如果你使用一个自动检索的 IDE，你应该可以轻易发现索引的命名空间：
 
 [source,php]
 --------------------------------------------------
